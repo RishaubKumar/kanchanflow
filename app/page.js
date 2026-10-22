@@ -1,8 +1,9 @@
-// KanchanFlow manufacturing CRM foundation homepage
+// KanchanFlow manufacturing CRM homepage
 "use client";
 
 import { useState } from "react";
 import Button from "@/components/Button";
+import ProductMockup from "@/components/ProductMockup";
 
 export default function Home() {
   const [rfqNumber, setRfqNumber] = useState("");
@@ -113,25 +114,44 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="border-b border-steel-grey bg-graphite py-16 text-white">
+      {/* Distinctive Hero Section with Product Mockup */}
+      <section className="border-b border-steel-grey bg-graphite py-12 lg:py-16 text-white">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="inline-block rounded bg-[#2D312E] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-warm-gold border border-[#3E433F] mb-4">
-            Manufacturing CRM & Shop-Floor Operations
-          </div>
-          <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Turn manufacturing RFQs into profitable shop-floor work orders.
-          </h1>
-          <p className="mt-4 max-w-2xl text-base text-steel-grey sm:text-lg">
-            KanchanFlow connects estimation engineers, sales reps, and shop-floor supervisors. Track drawing revisions, material cost buildups, and order lifecycles in one unified industrial workflow.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="#rfq-tracker" variant="primary">
-              Inspect Sample RFQ Tracker
-            </Button>
-            <Button href="/features" variant="outline-light">
-              Review Workflow Modules
-            </Button>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+            {/* Headline, Value Prop & CTAs */}
+            <div className="lg:col-span-5">
+              <div className="inline-block rounded border border-[#3E433F] bg-[#2D312E] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-warm-gold mb-4">
+                Manufacturing CRM & Shop-Floor Pipeline
+              </div>
+
+              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
+                Manage quotations, work orders, and your sales pipeline in one place.
+              </h1>
+
+              <p className="mt-4 text-base text-steel-grey sm:text-lg leading-relaxed">
+                Engineered for precision job shops, CNC units, and contract fabricators. KanchanFlow eliminates drawing revision errors, speeds up multi-tier cost estimation, and tracks orders from customer inquiry to final dispatch.
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button href="/features" variant="primary">
+                  Explore features
+                </Button>
+                <Button href="/pricing" variant="outline-light">
+                  View pricing
+                </Button>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3 text-xs text-steel-grey">
+                <span>✓ No complex ERP overhead</span>
+                <span>✓ Drawing revision sync</span>
+                <span>✓ India GST & MSME ready</span>
+              </div>
+            </div>
+
+            {/* Product UI Mockup */}
+            <div className="lg:col-span-7">
+              <ProductMockup />
+            </div>
           </div>
         </div>
       </section>
