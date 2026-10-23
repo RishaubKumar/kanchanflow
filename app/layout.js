@@ -9,8 +9,19 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "KanchanFlow - Manufacturing CRM",
-  description: "Manufacturing CRM for quotations, work orders, and shop-floor sales pipelines.",
+  title: {
+    default: "KanchanFlow - Manufacturing CRM",
+    template: "%s | KanchanFlow",
+  },
+  description:
+    "KanchanFlow is a manufacturing CRM for precision job shops and MSME contract manufacturers. Manage quotations, drawing revisions, work orders and shop-floor pipelines in one place.",
+  openGraph: {
+    title: "KanchanFlow - Manufacturing CRM",
+    description:
+      "Manufacturing CRM for precision job shops. Manage quotations, drawing revisions, work orders and shop-floor pipelines.",
+    type: "website",
+    siteName: "KanchanFlow",
+  },
 };
 
 export default function RootLayout({ children }) {
