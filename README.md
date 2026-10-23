@@ -129,19 +129,6 @@ The project has the following commits in the repository. All commits were made b
 
 Run git log --oneline to see the current commit history.
 
-## Deployment
 
-To deploy to Vercel:
-1. Install the Vercel CLI: npm install -g vercel
-2. Run: vercel in the project root
-3. Follow the prompts to link to your Vercel account and project
-4. For subsequent deployments: vercel --prod
-
-To deploy to Netlify:
-1. Install the Netlify CLI: npm install -g netlify-cli
-2. Run: npm run build to generate the production build
-3. Run: netlify deploy --dir=.next --prod
-4. Configure the Netlify Next.js plugin for full App Router support
-
-Live website URL: (to be added after deployment confirmation)
-Repository URL: (to be added after the repository is made public)
+Live website URL: https://kanchanflow-liard.vercel.app/
+Repository URL: https://github.com/RishaubKumar/kanchanflow
